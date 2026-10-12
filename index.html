@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emmanuel Agama — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fixed top navigation -->
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="#about" class="nav-logo">Emmanuel Agama</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#built">Built</a></li>
+        <li><a href="#method-notes">Method Notes</a></li>
+        <li><a href="#client-work">Client Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h1 class="section-heading">About</h1>
+        <p class="lede">
+          PLACEHOLDER: Bio sentence 1 &mdash; one line on who you are and what you build
+          (e.g. software engineer in Abuja building grounded, auditable AI systems for regulated domains).
+        </p>
+        <p>
+          PLACEHOLDER: Bio sentence 2 &mdash; one line on your background or the kind of problems you work on
+          (e.g. previously X, now focused on small, well-measured systems that earn trust rather than demand it).
+        </p>
+        <p>
+          PLACEHOLDER: Bio sentence 3 &mdash; one line on how you work (e.g. I favor simple systems,
+          honest evaluation, and shipping over architecture theatre).
+        </p>
+        <p>
+          PLACEHOLDER: Bio sentence 4 (optional) &mdash; one line on what you&rsquo;re looking for or available for.
+        </p>
+      </div>
+    </section>
+
+    <!-- BUILT (projects) -->
+    <section id="built" class="section section-alt">
+      <div class="container">
+        <h2 class="section-heading">Built</h2>
+        <p class="section-sub">
+          Selected projects. Each card links to the code, the methodology, and a short walkthrough.
+        </p>
+
+        <!--
+          PROJECT CARD — duplicate the entire <article class="card"> block below
+          (from <article> to </article>) to add another project. Replace the
+          title, summary text, pill labels/hrefs, and the YouTube VIDEO_ID in
+          the iframe src. The card layout (grid: text + video) is automatic.
+        -->
+        <article class="card">
+          <div class="card-body">
+            <h3 class="card-title">B1 &mdash; Grounded Q&amp;A on Nigerian Health Regulations</h3>
+            <p class="card-summary">
+              PLACEHOLDER: B1 summary &mdash; 2&ndash;3 sentences, plain English, mention the one key number
+              (e.g. 0/5 hallucination rate on unanswerable questions after guardrails, 100% retrieval accuracy on
+              a 30-question evaluation set). Describe what the assistant does, who it&rsquo;s for, and the
+              headline reliability result in concrete terms a non-technical reader can understand.
+            </p>
+            <div class="pill-row">
+              <a class="pill" href="https://github.com/emmyagama/ng-health-reg-assistant" target="_blank" rel="noopener">Live Repo</a>
+              <a class="pill" href="docs/explainer.md" target="_blank" rel="noopener">Method Note</a>
+              <a class="pill" href="docs/architecture_note.md" target="_blank" rel="noopener">Architecture Note</a>
+              <a class="pill" href="https://www.youtube.com/watch?v=VIDEO_ID_PLACEHOLDER" target="_blank" rel="noopener">Demo Video</a>
+            </div>
+          </div>
+          <div class="card-video">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_PLACEHOLDER"
+              title="B1 demo video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </article>
+        <!-- END PROJECT CARD — duplicate the article block above to add more projects -->
+
+      </div>
+    </section>
+
+    <!-- METHOD NOTES -->
+    <section id="method-notes" class="section">
+      <div class="container">
+        <h2 class="section-heading">Method Notes</h2>
+        <p class="section-sub">
+          A method note is a short, plain-English write-up of what I built, why I built it that way,
+          how I measured it, and what I&rsquo;d change &mdash; written for a hiring manager or technically
+          curious reader rather than another developer reading the code.
+        </p>
+        <ul class="note-list">
+          <li>
+            <a href="docs/explainer.md" target="_blank" rel="noopener">
+              <span class="note-title">B1 &mdash; Grounded assistant on Nigerian health regulations</span>
+              <span class="note-meta">How I built it and measured whether it lies &middot; ~800 words</span>
+            </a>
+          </li>
+          <!-- PLACEHOLDER: add more <li> items here as additional method notes are written -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- CLIENT WORK -->
+    <section id="client-work" class="section section-muted">
+      <div class="container client-work-inner">
+        <p class="client-work-message">
+          Client work becomes available here from November 2026.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-heading">Contact</h2>
+        <p class="section-sub">
+          The fastest way to reach me is email. I&rsquo;m also on LinkedIn.
+        </p>
+        <div class="contact-row">
+          <a class="contact-btn" href="mailto:PLACEHOLDER_EMAIL@example.com">PLACEHOLDER_EMAIL@example.com</a>
+          <a class="contact-btn contact-btn-secondary" href="https://www.linkedin.com/in/PLACEHOLDER_PROFILE" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Emmanuel Agama. Built with plain HTML and CSS.</p>
+    </div>
+  </footer>
+
+  <!-- Minimal JS: set the footer year (no frameworks, no scroll JS — CSS smooth-scroll handles anchors) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

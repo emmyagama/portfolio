@@ -1,0 +1,293 @@
+/* ============================================================
+   Portfolio — single-page site
+   Palette:
+     - Ink:     #0f172a  (slate-900)   headings / body text
+     - Muted:   #475569  (slate-600)   secondary text
+     - Line:    #e2e8f0  (slate-200)   borders / dividers
+     - Accent:  #0f766e  (teal-700)    links / buttons
+     - Accent-hover: #0d5c56
+     - Alt bg:  #f8fafc  (slate-50)    alternating sections
+     - Muted bg:#f1f5f9  (slate-100)   client-work band
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #0f172a;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, iframe { max-width: 100%; display: block; }
+
+a { color: #0f766e; text-decoration: none; }
+a:hover { color: #0d5c56; text-decoration: underline; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+}
+.nav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+.nav-logo:hover { text-decoration: none; color: #0f766e; }
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.nav-links a:hover { color: #0f172a; text-decoration: none; }
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 88px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.section:last-of-type { border-bottom: none; }
+.section-alt { background: #f8fafc; }
+.section-muted { background: #f1f5f9; }
+
+.section-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  color: #0f172a;
+}
+.section-sub {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 680px;
+  margin: 0 0 36px 0;
+}
+
+/* About */
+.lede {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #0f172a;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  max-width: 760px;
+}
+#about p { max-width: 720px; margin: 0 0 16px 0; color: #334155; }
+
+/* ---------- Project card ---------- */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+  align-items: start;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.card + .card { margin-top: 28px; }
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+}
+.card-summary {
+  color: #334155;
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pill {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0f766e;
+  background: #ecfdf5;
+  border: 1px solid #ccfbf1;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.pill:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border-color: #0f766e;
+  text-decoration: none;
+}
+
+.card-video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0f172a;
+}
+.card-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Method notes list ---------- */
+.note-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+}
+.note-list li {
+  border-bottom: 1px solid #e2e8f0;
+}
+.note-list li:first-child { border-top: 1px solid #e2e8f0; }
+.note-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 0;
+  color: #0f172a;
+  flex-wrap: wrap;
+}
+.note-list a:hover { text-decoration: none; color: #0f766e; }
+.note-title { font-weight: 500; font-size: 1rem; }
+.note-meta { color: #64748b; font-size: 0.875rem; }
+
+/* ---------- Client work ---------- */
+.client-work-inner {
+  text-align: center;
+  padding: 48px 0;
+}
+.client-work-message {
+  font-size: 1.15rem;
+  color: #475569;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ---------- Contact ---------- */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+.contact-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  background: #0f766e;
+  color: #ffffff;
+  border: 1px solid #0f766e;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.contact-btn:hover {
+  background: #0d5c56;
+  border-color: #0d5c56;
+  color: #ffffff;
+  text-decoration: none;
+}
+.contact-btn-secondary {
+  background: #ffffff;
+  color: #0f766e;
+  border-color: #0f766e;
+}
+.contact-btn-secondary:hover {
+  background: #ecfdf5;
+  color: #0f766e;
+  border-color: #0f766e;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 28px 0 40px 0;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  text-align: center;
+}
+.site-footer p { margin: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .section { padding: 64px 0; }
+  .section-heading { font-size: 1.75rem; }
+  .lede { font-size: 1.1rem; }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+  .nav-links {
+    gap: 16px;
+    font-size: 0.9rem;
+  }
+
+  html { scroll-padding-top: 110px; }
+
+  .card { padding: 20px; gap: 20px; }
+  .card-title { font-size: 1.2rem; }
+
+  .note-list a { flex-direction: column; gap: 4px; padding: 14px 0; }
+
+  .contact-btn { width: 100%; text-align: center; }
+}
